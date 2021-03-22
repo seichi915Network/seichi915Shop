@@ -1,0 +1,94 @@
+name: Seichi915Shop
+version: 1.0.0
+main: net.seichi915.seichi915shop.Seichi915Shop
+api-version: "1.13"
+load: POSTWORLD
+authors: [stouma915]
+description: "seichi915Network ショッププラグイン"
+website: https://www.seichi915.net
+depend:
+  - Seichi915Economy
+softdepend:
+  - WorldGuard
+  - GriefPrevention
+commands:
+  createshop:
+    description: Create shop
+    usage: /createshop <Name> <DisplayName>
+    permission: seichi915shop.command.createshop
+    permission-message: "§c権限が不足しています。"
+  modifyshop:
+    description: Change shop settings
+    usage: /modifyshop <Name> <Key> <Value>
+    permission: seichi915shop.command.modifyshop
+    permission-message: "§c権限が不足しています。"
+  deleteshop:
+    description: Delete shop
+    usage: /deleteshop <Name>
+    permission: seichi915shop.command.deleteshop
+    permission-message: "§c権限が不足しています。"
+  createstore:
+    description: Create store
+    usage: /createstore <Name>
+    permission: seichi915shop.command.createstore
+    permission-message: "§c権限が不足しています。"
+  deletestore:
+    description: Delete store
+    usage: /deletestore
+    permission: seichi915shop.command.deletestore
+    permission-message: "§c権限が不足しています。"
+  editshop:
+    description: Edit shop
+    usage: /editshop <Name>
+    permission: seichi915shop.command.editshop
+    permission-message: "§c権限が不足しています。"
+  setproduct:
+    description: Set product
+    usage: /setproduct <Name> <Index> <Price>
+    permission: seichi915shop.command.setproduct
+    permission-message: "§c権限が不足しています。"
+  setprice:
+    description: Set price
+    usage: /setprice <Name> <Index> <Price>
+    permission: seichi915shop.command.setprice
+    permission-message: "§c権限が不足しています。"
+permissions:
+  seichi915shop.*:
+    description: Grant all permissions of seichi915Shop
+    children:
+      seichi915shop.command.*: true
+  seichi915shop.command.*:
+    description: Grant all command permissions of seichi915Shop
+    children:
+      seichi915shop.command.createshop: true
+      seichi915shop.command.modifyshop: true
+      seichi915shop.command.deleteshop: true
+      seichi915shop.command.createstore: true
+      seichi915shop.command.deletestore: true
+      seichi915shop.command.editshop: true
+      seichi915shop.command.setproduct: true
+      seichi915shop.command.setprice: true
+  seichi915shop.command.createshop:
+    description: Permission to use /createshop
+    default: true
+  seichi915shop.command.modifyshop:
+    description: Permission to use /modifyshop
+    default: true
+  seichi915shop.command.deleteshop:
+    description: Permission to use /deleteshop
+    default: true
+  seichi915shop.command.createstore:
+    description: Permission to use /createstore
+    default: true
+  seichi915shop.command.deletestore:
+    description: Permission to use /deletestore
+    default: true
+  seichi915shop.command.editshop:
+    description: Permission to use /editshop
+    default: true
+  seichi915shop.command.setproduct:
+    description: Permission to use /setproduct
+    default: true
+  seichi915shop.command.setprice:
+    description: Permission to use /setprice
+    default: true
