@@ -65,7 +65,7 @@ class SetProductCommand extends CommandExecutor with TabExecutor {
       sender.sendMessage("既にそのインデックスに商品データが存在しています。".toErrorMessage)
       return true
     }
-    val itemInMainHand = player.getInventory.getItemInMainHand
+    val itemInMainHand = player.getInventory.getItemInMainHand.clone()
     if (itemInMainHand.isNull || itemInMainHand.getType == Material.AIR) {
       sender.sendMessage("商品にしたいアイテムをメインハンドに持ってください。".toErrorMessage)
       return true
