@@ -1,5 +1,5 @@
 name: Seichi915Shop
-version: 1.0.0
+version: 1.0.1
 main: net.seichi915.seichi915shop.Seichi915Shop
 api-version: "1.13"
 load: POSTWORLD
