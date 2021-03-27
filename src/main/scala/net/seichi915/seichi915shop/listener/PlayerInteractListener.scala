@@ -112,7 +112,7 @@ class PlayerInteractListener extends Listener {
         _.getUniqueId != event.getPlayer.getUniqueId)
       val task = IO {
         Database.deleteStoreData(storeData)
-        event.getPlayer.sendMessage("ショップの削除が完了しました。".toSuccessMessage)
+        event.getPlayer.sendMessage("店舗の削除が完了しました。".toSuccessMessage)
       }
       val contextShift = IO.contextShift(ExecutionContext.global)
       IO.shift(contextShift).flatMap(_ => task).unsafeRunAsyncAndForget()

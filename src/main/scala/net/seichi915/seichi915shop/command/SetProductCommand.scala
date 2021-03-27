@@ -52,11 +52,11 @@ class SetProductCommand extends CommandExecutor with TabExecutor {
     val price = args(2).toDoubleOption match {
       case Some(double) => double
       case None =>
-        sender.sendMessage("値段は数字で指定してください。".toErrorMessage)
+        sender.sendMessage("価格は数字で指定してください。".toErrorMessage)
         return true
     }
     if (price < 0.0) {
-      sender.sendMessage("値段は0.0以上で指定してください。".toErrorMessage)
+      sender.sendMessage("価格は0.0以上で指定してください。".toErrorMessage)
       return true
     }
     val productData =

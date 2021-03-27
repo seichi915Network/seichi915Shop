@@ -53,7 +53,7 @@ case class ShopEditMenu(shopData: ShopData) extends Menu {
           .build
         addProductButton.setClickAction { player =>
           player.sendMessage(
-            s"商品にしたいアイテムを手に持ち、 /setproduct ${shopData.getName} $index <値段> と入力してください。".toNormalMessage)
+            s"商品にしたいアイテムを手に持ち、 /setproduct ${shopData.getName} $index <価格> と入力してください。".toNormalMessage)
           player.closeInventory()
         }
         inventory.setItem(index, addProductButton)
